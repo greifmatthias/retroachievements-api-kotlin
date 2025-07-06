@@ -438,7 +438,8 @@ interface RetroInterface {
         @Query("i") username: String,
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
-        @Query("t") type: Int = 3
+        @Query("t") type: Int = 3,
+        @Query("sort") sort: GetComments.SortParam = GetComments.SortParam.ASCENDING
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 
     /**
@@ -450,7 +451,8 @@ interface RetroInterface {
         @Query("i") gameId: Long,
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
-        @Query("t") type: Int = 1
+        @Query("t") type: Int = 1,
+        @Query("sort") sort: GetComments.SortParam = GetComments.SortParam.ASCENDING
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 
     /**
@@ -462,6 +464,7 @@ interface RetroInterface {
         @Query("i") achievementId: Long,
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
-        @Query("t") type: Int = 2
+        @Query("t") type: Int = 2,
+        @Query("sort") sort: GetComments.SortParam = GetComments.SortParam.ASCENDING
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 }
