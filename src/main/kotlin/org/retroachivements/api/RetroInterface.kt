@@ -352,7 +352,7 @@ interface RetroInterface {
     @Mock @MockResponse(body = "/v1/feed/GetRecentGameAwards.json")
     @POST("/API/API_GetRecentGameAwards.php")
     suspend fun getRecentGameAwards(
-        @Query("d") @DateFormat("yyyy-MM-dd") startingDate: Date = Date(),
+        @Query("d") @DateFormat("yyyy-MM-dd") startingDate: Date? = null,
         @Query("c") count: Int = 25,
         @Query("o") offset: Int = 0,
         @Query("k") kinds: String = listOf("beaten-softcore", "beaten-hardcore", "completed", "mastered").joinToString()
