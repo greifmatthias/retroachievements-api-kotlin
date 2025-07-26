@@ -71,6 +71,12 @@ class GetGameInfoAndUserProgress {
         @SerializedName("NumAchievements")
         val numAchievements: Int,
 
+        @SerializedName("NumAwardedToUser")
+        val numAwardedToUser: Int,
+
+        @SerializedName("NumAwardedToUserHardcore")
+        val numAwardedToUserHardcore: Int,
+
         @SerializedName("Achievements")
         val achievements: HashMap<String, Achievement>,
 

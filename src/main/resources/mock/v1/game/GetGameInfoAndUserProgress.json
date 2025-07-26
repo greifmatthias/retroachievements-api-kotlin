@@ -22,6 +22,8 @@
   "ParentGameID": null,
   "NumDistinctPlayers": 27080,
   "NumAchievements": 23,
+  "NumAwardedToUser": 5,
+  "NumAwardedToUserHardcore": 4,
   "Achievements": {
     "9": {
       "ID": 9,
