@@ -44,9 +44,9 @@ class GetUserCompletionProgress {
         val mostRecentAwardedDate: String,
 
         @SerializedName("HighestAwardKind")
-        val highestAwardKind: String,
+        val highestAwardKind: String?,
 
         @SerializedName("HighestAwardDate")
-        val highestAwardDate: String
+        val highestAwardDate: String?
     )
 }
