@@ -52,7 +52,7 @@ class GetUserAwards {
             val consoleId: Long,
 
             @SerializedName("ConsoleName")
-            val consoleName: String,
+            val consoleName: String?,
 
             @SerializedName("Flags")
             val flags: Int,
