@@ -94,8 +94,8 @@ class RetroInterfaceTest {
 
             val getUserRecentAchievements: NetworkResponse<GetUserRecentAchievements.Response, ErrorResponse> = api.getAchievementsEarnedBetween(
                 username = "MaxMilyin",
-                fromDate = fromDate,
-                toDate = toDate
+                fromDate = fromDate.epochSecond,
+                toDate = toDate.epochSecond
             )
 
             assert(getUserRecentAchievements is NetworkResponse.Success)
