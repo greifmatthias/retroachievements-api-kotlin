@@ -80,8 +80,19 @@ interface RetroInterface {
     @POST("/API/API_GetGameInfoAndUserProgress.php")
     suspend fun getGameInfoAndUserProgress(
         @Query("u") username: String,
-        @Query("g") gameId: Long
+        @Query("g") gameId: Long,
+        @Query("a") includeUserAward: Int = 0
     ): NetworkResponse<GetGameInfoAndUserProgress.Response, ErrorResponse>
+
+    /**
+     * A call to this endpoint will retrieve information about the average time to unlock achievements in a game, targeted via its unique ID.
+     */
+    @Mock @MockResponse(body = "/v1/game/GetGameProgression.json")
+    @POST("/API/API_GetGameProgression.php")
+    suspend fun getGameProgression(
+        @Query("i") gameId: Long,
+        @Query("h") hardcore: Int = 0
+    ): NetworkResponse<GetGameProgression.Response, ErrorResponse>
 
     /**
      * A call to this function will retrieve a giver user's completion progress, targeted by their username.
@@ -206,6 +217,16 @@ interface RetroInterface {
     ): NetworkResponse<GetUsersFollowingMe.Response, ErrorResponse>
 
     /**
+     * A call to this endpoint will retrieve a given user's set requests, maximum total requests and points until next request.
+     */
+    @Mock @MockResponse(body = "/v1/user/GetUserSetRequests.json")
+    @POST("/API/API_GetUserSetRequests.php")
+    suspend fun getUserSetRequests(
+        @Query("u") userId: String,
+        @Query("t") all: Int = 0
+    ): NetworkResponse<GetUserSetRequests.Response, ErrorResponse>
+
+    /**
      * A call to this function will retrieve basic metadata about a game, targeted via its unique ID.
      */
     @Mock @MockResponse(body = "/v1/game/GetGame.json")
@@ -292,6 +313,18 @@ interface RetroInterface {
     ): NetworkResponse<GetLeaderboardEntries.Response, ErrorResponse>
 
     /**
+     * A call to this function will retrieve a given leaderboard's entries, targeted by its ID.
+     */
+    @Mock @MockResponse(body = "/v1/game/GetUserGameLeaderboards.json")
+    @POST("/API/API_GetUserGameLeaderboards.php")
+    suspend fun getUserGameLeaderboards(
+        @Query("i") gameId: Long,
+        @Query("u") userId: String? = null,
+        @Query("o") offset: Int = 0,
+        @Query("c") count: Int = 100
+    ): NetworkResponse<GetUserGameLeaderboard.Response, ErrorResponse>
+
+    /**
      * A call to this function will retrieve the complete list of all system ID and name pairs on the site.
      *
      * [activeSystemsOnly] set to 1
@@ -315,7 +348,9 @@ interface RetroInterface {
     suspend fun getGameList(
         @Query("i") consoleId: Long,
         @Query("f") shouldOnlyRetrieveGamesWithAchievements: Int = 0,
-        @Query("h") shouldRetrieveGameHashes: Int = 0
+        @Query("h") shouldRetrieveGameHashes: Int = 0,
+        @Query("o") offset: Int = 0,
+        @Query("c") count: Int = 0
     ): NetworkResponse<GetGameList.Response, ErrorResponse>
 
     /**
@@ -438,7 +473,8 @@ interface RetroInterface {
         @Query("i") username: String,
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
-        @Query("t") type: Int = 3
+        @Query("t") type: Int = 3,
+        @Query("sort") sort: String = "submitted"
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 
     /**
@@ -450,7 +486,8 @@ interface RetroInterface {
         @Query("i") gameId: Long,
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
-        @Query("t") type: Int = 1
+        @Query("t") type: Int = 1,
+        @Query("sort") sort: String = "submitted"
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 
     /**
@@ -462,6 +499,7 @@ interface RetroInterface {
         @Query("i") achievementId: Long,
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
-        @Query("t") type: Int = 2
+        @Query("t") type: Int = 2,
+        @Query("sort") sort: String = "submitted"
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 }
