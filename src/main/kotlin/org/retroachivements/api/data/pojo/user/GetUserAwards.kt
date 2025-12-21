@@ -46,7 +46,7 @@ class GetUserAwards {
             val displayOrder: Int,
 
             @SerializedName("Title")
-            val title: String,
+            val title: String?,
 
             @SerializedName("ConsoleID")
             val consoleId: Long,
