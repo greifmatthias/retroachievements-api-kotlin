@@ -132,8 +132,8 @@ class GetGameExtended {
             @SerializedName("MemAddr")
             val memAddr: String,
 
-            @SerializedName("Type")
-            val type: String
+            @SerializedName("type")
+            val type: String?
         )
 
         data class Claim(
