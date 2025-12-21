@@ -21,4 +21,10 @@ class GetComments {
         val commentText: String,
     )
 
+    enum class SortParam(val query: String) {
+        ASCENDING("submitted"),
+        DESCENDING("-submitted");
+
+        override fun toString() = query
+    }
 }

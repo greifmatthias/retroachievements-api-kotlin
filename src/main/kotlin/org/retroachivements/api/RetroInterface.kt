@@ -474,7 +474,7 @@ interface RetroInterface {
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
         @Query("t") type: Int = 3,
-        @Query("sort") sort: String = "submitted"
+        @Query("sort") sort: GetComments.SortParam = GetComments.SortParam.ASCENDING
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 
     /**
@@ -487,7 +487,7 @@ interface RetroInterface {
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
         @Query("t") type: Int = 1,
-        @Query("sort") sort: String = "submitted"
+        @Query("sort") sort: GetComments.SortParam = GetComments.SortParam.ASCENDING
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 
     /**
@@ -500,6 +500,6 @@ interface RetroInterface {
         @Query("c") count: Int = 10,
         @Query("o") offset: Int = 0,
         @Query("t") type: Int = 2,
-        @Query("sort") sort: String = "submitted"
+        @Query("sort") sort: GetComments.SortParam = GetComments.SortParam.ASCENDING
     ): NetworkResponse<GetComments.Response, ErrorResponse>
 }
