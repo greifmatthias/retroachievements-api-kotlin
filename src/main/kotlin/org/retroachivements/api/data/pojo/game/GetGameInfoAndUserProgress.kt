@@ -93,7 +93,13 @@ class GetGameInfoAndUserProgress {
         val userCompletion: String,
 
         @SerializedName("UserCompletionHardcore")
-        val userCompletionHardcore: String
+        val userCompletionHardcore: String,
+
+        @SerializedName("HighestAwardKind")
+        val highestAwardKind: String?,
+
+        @SerializedName("HighestAwardDate")
+        val highestAwardDate: String?
     ) {
         data class Achievement(
             @SerializedName("ID")
