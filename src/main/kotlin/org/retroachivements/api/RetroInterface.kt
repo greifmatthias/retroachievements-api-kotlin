@@ -59,8 +59,8 @@ interface RetroInterface {
     @POST("/API/API_GetAchievementsEarnedBetween.php")
     suspend fun getAchievementsEarnedBetween(
         @Query("u") username: String,
-        @Query("f") @DateFormat("yyyy-MM-dd") fromDate: Date,
-        @Query("t") @DateFormat("yyyy-MM-dd") toDate: Date
+        @Query("f") fromDate: Long,
+        @Query("t") toDate: Long
     ): NetworkResponse<GetUserRecentAchievements.Response, ErrorResponse>
 
     /**
