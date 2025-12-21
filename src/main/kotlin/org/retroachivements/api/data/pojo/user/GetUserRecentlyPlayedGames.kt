@@ -31,7 +31,7 @@ class GetUserRecentlyPlayedGames {
             val imageBoxArt: String,
 
             @SerializedName("LastPlayed")
-            val lastPlayed: String,
+            val lastPlayed: String?,
 
             @SerializedName("AchievementsTotal")
             val achievementsTotal: Long,
