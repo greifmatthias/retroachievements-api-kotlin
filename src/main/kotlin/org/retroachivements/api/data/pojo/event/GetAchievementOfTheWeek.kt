@@ -54,6 +54,12 @@ class GetAchievementOfTheWeek {
             @SerializedName("Author")
             val author: String,
 
+            @SerializedName("BadgeName")
+            val badgeName: String,
+
+            @SerializedName("BadgeURL")
+            val badgeUrl: String,
+
             @SerializedName("DateCreated")
             val dateCreated: String,
 
