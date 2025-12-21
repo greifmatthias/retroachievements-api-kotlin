@@ -43,6 +43,9 @@ class GetUserProfile {
         @SerializedName("ID")
         val id: Long,
 
+        @SerializedName("ULID")
+        val ulId: String,
+
         @SerializedName("UserWallActive")
         val userWallActive: Boolean,
 
