@@ -855,8 +855,8 @@ val toDate: Date = dateFormat.parse("2022-01-08")
 
 val response: NetworkResponse<GetUserRecentAchievements.Response, ErrorResponse> = api.getAchievementsEarnedBetween(
     username = "Jamiras",
-    fromDate = fromDate,
-    toDate = toDate
+    fromDate = fromDate.epochSecond,
+    toDate = toDate.epochSecond
 )
 
 if (response is NetworkResponse.Success) {
