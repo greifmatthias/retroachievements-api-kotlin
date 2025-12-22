@@ -1,0 +1,1 @@
+rootProject.name = "retroachievements-api-kotlin"

@@ -21,7 +21,7 @@ import org.retroachivements.api.data.pojo.user.*
 import org.retroachivements.api.test.ResourceBodyFactory
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.test.assertNotNull
+import org.junit.jupiter.api.Assertions.assertNotNull
 
 
 class RetroInterfaceTest {

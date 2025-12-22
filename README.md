@@ -7,6 +7,10 @@
         
 <h1 align="center">RetroAchievements Web API Client</h1>
 
+[![](https://jitpack.io/v/greifmatthias/retroachievements-api-kotlin.svg)](https://jitpack.io/#greifmatthias/retroachievements-api-kotlin)
+![Weekly download statistics](https://jitpack.io/v/greifmatthias/retroachievements-api-kotlin/week.svg)
+![Monthly download statistics](https://jitpack.io/v/greifmatthias/retroachievements-api-kotlin/month.svg)
+
 ## Installation
 
 To begin, import the library using jitpack.io.
@@ -26,7 +30,7 @@ Then add this `api-kotlin` dependency to your `pom.xml` project!
 <dependency>    
     <groupId>com.github.RetroAchievements</groupId>    
     <artifactId>api-kotlin</artifactId>    
-    <version>1.2.0.hotfix-2</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
