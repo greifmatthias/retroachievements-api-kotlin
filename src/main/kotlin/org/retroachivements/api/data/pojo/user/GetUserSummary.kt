@@ -204,7 +204,7 @@ class GetUserSummary {
             @SerializedName("ImageTitle")
             val imageTitle: String,
 
-            @SerializedName("ImageInGame")
+            @SerializedName("ImageIngame")
             val imageInGame: String,
 
             @SerializedName("ImageBoxArt")
