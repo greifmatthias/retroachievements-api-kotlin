@@ -30,7 +30,7 @@ Then add this `api-kotlin` dependency to your `pom.xml` project!
 <dependency>    
     <groupId>com.github.RetroAchievements</groupId>    
     <artifactId>api-kotlin</artifactId>    
-    <version>1.2.0</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 

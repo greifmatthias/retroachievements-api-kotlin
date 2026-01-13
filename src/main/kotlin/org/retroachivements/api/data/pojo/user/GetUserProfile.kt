@@ -47,7 +47,7 @@ class GetUserProfile {
         val ulId: String,
 
         @SerializedName("UserWallActive")
-        val userWallActive: Boolean,
+        val userWallActive: Int,
 
         @SerializedName("Motto")
         val motto: String?,
