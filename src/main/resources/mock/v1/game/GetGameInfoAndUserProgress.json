@@ -39,7 +39,7 @@
             "BadgeName": "250336",
             "DisplayOrder": 1,
             "MemAddr": "22c9d5e2cd7571df18a1a1b43dfe1fea",
-            "type": "progression",
+            "Type": "progression",
             "DateEarnedHardcore": "2016-03-12 17:47:29",
             "DateEarned": "2016-03-12 17:47:29"
         }
